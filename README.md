@@ -10,7 +10,7 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 
 ## ScreenShot
 您目前可以暂时通过访问我们的Blog - [```Discover a balance point```][blog]来查看效果。
-- TODO [#1](#Todo)
+- TODO [#1](#todo)
 
 ## Changelog
 - **changelog-0.9.3**
@@ -23,7 +23,8 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 - #2: 修改```private```字段的权限从固定的```administrator```变更为可调整
 - #3: 为Sidebar和NavBar中的分类做可配置调整
 - #4: 为评论提供更好的体验
-- #5：提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
+- #5: 提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
+- #6: 提供一个To Top的跟随按钮
 
 ## History
 - **changelog-0.9<init>**
