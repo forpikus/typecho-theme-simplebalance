@@ -7,8 +7,7 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 ```Discover a balance point```也使用了SimpleBalance作为默认的theme，在Blog生效期间，Forpikus Team将会维护这个项目，目前SimpleBalance为了配合Forpikus Team只提供了英文界面，后期将加入多语言支持。
 
 ## ScreenShot
-您目前可以暂时通过访问我们的Blog - [```Discover a balance point```][blog]来查看效果。
-- TODO [#1](#todo)
+![][screenshot]
 
 ## Changelog
 - **changelog-0.9.4**
@@ -20,12 +19,12 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
     - 添加了导航栏的自适应能力，在屏幕宽度较小时，会自动隐藏了
 
 ## Todo
-- #1: 为主题添加一个Demo ScreenShot
-- #2: 修改```private```字段的权限从固定的```administrator```变更为可调整
-- #3: 为Sidebar和NavBar中的分类做可配置调整
-- #4: 为评论提供更好的体验
-- #5: 提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
-- #6: 提供一个To Top的跟随按钮
+- \#1: 为主题添加一个Demo ScreenShot
+- \#2: 修改```private```字段的权限从固定的```administrator```变更为可调整
+- \#3: 为Sidebar和NavBar中的分类做可配置调整
+- \#4: 为评论提供更好的体验
+- \#5: 提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
+- \#6: 提供一个To Top的跟随按钮
 
 ## History
 - **changelog-0.9.3**
@@ -43,3 +42,4 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 [behave]: http://jakiestfu.github.io/Behave.js
 [themeurl]: http://forpikus.com/resources/typecho-theme-simplebalance-0.9.3-20150215.7z
 [blog]: http://forpikus.com/blog
+[screenshot]: https://raw.githubusercontent.com/forpikus/typecho-theme-simplebalance/master/screenshot.png
