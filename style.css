@@ -1,21 +1,20 @@
 /**
  * @package SimpleBalance
  * @author Forpikus Team (based on cho)
- * @version 0.9.3
+ * @version 0.9.4
  * @link http://forpikus.com/blog (orignal: http://pickcho.com)
  */
- @font-face {
-    font-family: 'icomoon';
-    src:url('fonts/icomoon.eot?-i5ysuu');
-    src:url('fonts/icomoon.eot?#iefix-i5ysuu') format('embedded-opentype'),
-        url('fonts/icomoon.woff?-i5ysuu') format('woff'),
-        url('fonts/icomoon.ttf?-i5ysuu') format('truetype'),
-        url('fonts/icomoon.svg?-i5ysuu#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}site-name
+ 
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot');
+  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/iconfont.woff') format('woff'),
+  url('fonts/iconfont.ttf') format('truetype'),
+  url('fonts/iconfont.svg#iconfont') format('svg');
+}
+
 [class^="icon-"], [class*=" icon-"] {
-    font-family: 'icomoon';
+    font-family: "iconfont" !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -25,46 +24,32 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke-width: 0.2px;
 }
-.icon-search:before {
-    content: "\e601";
-}
-.icon-air:before {
-    content: "\e602";
-}
-.icon-rss:before {
-    content: "\e603";
-}
-.icon-list:before {
-    content: "\e604";
-}
-.icon-cc-by:before {
-    content: "\e605";
-}
-.icon-cc-nc:before {
-    content: "\e606";
-}
-.icon-cc-sa:before {
-    content: "\e607";
-}
-.icon-github:before {
-    content: "\e608";
-}
-.icon-twitter:before {
-    content: "\e609";
-}
-.icon-googleplus:before {
-    content: "\e60a";
-}
-.icon-qq:before {
-    content: "\e60b";
-}
-.icon-instagram:before {
-    content: "\e60c";
-}
-.icon-sina-weibo:before {
-    content: "\e60d";
-}
+
+.icon-tag:before { content: "\f0060"; }
+.icon-warn:before { content: "\f00b7"; }
+.icon-help:before { content: "\f00b8"; }
+.icon-file:before { content: "\f00bd"; }
+.icon-account:before { content: "\f00bb"; }
+.icon-lock:before { content: "\f00c9"; }
+.icon-search:before { content: "\f012c"; }
+.icon-facebook:before { content: "\f012a"; }
+.icon-other:before { content: "\f0141"; }
+.icon-codefile:before { content: "\f01c6"; }
+.icon-googleplus:before { content: "\e783"; }
+.icon-googledrive:before { content: "\e785"; }
+.icon-qq:before { content: "\e696"; }
+.icon-qzone:before { content: "\e67f"; }
+.icon-weixin:before { content: "\e620"; }
+.icon-reply:before { content: "\e660"; }
+.icon-top:before { content: "\e63c"; }
+.icon-rss:before { content: "\e639"; }
+.icon-weibo:before { content: "\e66c"; }
+.icon-github:before { content: "\e7ad"; }
+.icon-twitter:before { content: "\e60a"; }
+.icon-about:before { content: "\e66e"; }
+
 body {
     background-color:#FFF;
     color:#444;
@@ -128,6 +113,27 @@ code.has-numbering {
     text-align: right;
     color: #AAA;
     font-size: .92857em;
+}
+
+h5.codefile {
+    background: #eee;
+    padding: 4px 8px;
+    line-height:1;
+    font-weight: normal;
+    color: #777;
+    font-size: 15px;
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: -1em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-family: "DejaVu Sans Mono", Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+}
+
+h5.codefile:before {
+    content: "Source File: ";
 }
 
 blockquote {
