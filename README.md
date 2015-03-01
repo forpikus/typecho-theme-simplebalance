@@ -16,6 +16,7 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 - ```new, 0.9.5``` 已支持流程图[flowchat][]<br/>
   Usage：
   <pre><code>
+
      ```flowchat  
      st=>start: Start
      e=>end
@@ -26,16 +27,19 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
      cond(yes)->e
      cond(no)->op
      ```
+     
   </code></pre>
 - ```new, 0.9.5``` 已支持时序图[sequence][]<br/>
   Usage：
   <pre><code>
+
      ```sequence  
      Andrew->China: Says Hello
      Note right of China: China thinks\nabout it
      China-->Andrew: How are you?
      Andrew->>China: I am good thanks!
      ```
+     
   </code></pre>
 - ```new, 0.9.5``` 可定制的文章权限控制，在发布的文章后新建一个名为```private```的自定义字段，便可阻止指定等级以下的用户浏览该文章，字段值为[用户等级][useracl]，留空默认为4(vistor)即只有注册用户可以访问
 - ```0.9.4``` 代码部分可以通过```##### main.h {.codefile}```来在代码区域前显示一个文件名
