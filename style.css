@@ -1,10 +1,53 @@
 /**
  * @package SimpleBalance
  * @author Forpikus Team (based on cho)
- * @version 0.9.4
- * @link http://forpikus.com/blog (orignal: http://pickcho.com)
+ * @version 0.9.5
+ * @link https://github.com/forpikus/typecho-theme-simplebalance
  */
  
+
+@font-face {
+    font-family:'Andale Mono';
+    src: local('DejaVu Sans Mono');
+}
+@font-face {
+    font-family:'Andale Mono';
+    src: local('WenQuanYi Micro Hei Mono');
+}
+@font-face {
+    font-family:'Andale Mono';
+    src: local('Ubuntu Mono');
+}
+@font-face {
+    font-family:'Andale Mono';
+    src: local('Consolas');
+}
+@font-face {
+    font-family:'Andale Mono';
+    src: local('monospace');
+}
+
+@font-face {
+    font-family: Arial;
+    src: local('DejaVu Sans Mono');
+}
+@font-face {
+    font-family:Arial;
+    src: local('WenQuanYi Micro Hei Mono');
+}
+@font-face {
+    font-family:Arial;
+    src: local('Ubuntu Mono');
+}
+@font-face {
+    font-family:Arial;
+    src: local('Consolas');
+}
+@font-face {
+    font-family:Arial;
+    src: local('monospace');
+}
+
 @font-face {font-family: "iconfont";
   src: url('fonts/iconfont.eot');
   src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'),
@@ -50,11 +93,32 @@
 .icon-twitter:before { content: "\e60a"; }
 .icon-about:before { content: "\e66e"; }
 
+@font-face {font-family: "checkfont";
+  src: url('fonts/check.eot'); /* IE9*/
+  src: url('fonts/check.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/check.woff') format('woff'), /* chrome、firefox */
+  url('fonts/check.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('fonts/check.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+[class^="checkf-"], [class*=" checkf-"] {
+  font-family:"checkfont" !important;
+  font-size: 18px;
+  font-style:normal;
+  padding-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.checkf-y:before { content: "\e6e4"; }
+.checkf-n:before { content: "\e6e5"; }
+
+
 body {
     background-color:#FFF;
     color:#444;
     font-size:14px;
-    font-family:"DejaVu Sans", "WenQuanYi Micro Hei", Tahoma, "TIBch", "Classic Grotesque W01", "Helvetica Neue", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", SimSun, Arial, sans-serif;
+    font-family:"DejaVu Sans", "WenQuanYi Micro Hei", Tahoma, "TIBch", "Classic Grotesque W01", "Helvetica Neue", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", SimSun, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling:touch;
@@ -78,7 +142,8 @@ mark {
 pre, code {
     
     font-family: "DejaVu Sans Mono", Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
-    font-size:.92857em;
+    font-size: 0.79577em;
+    line-height: 1.3;
 }
 code {
     padding: 0 8px;
@@ -112,13 +177,13 @@ code.has-numbering {
     border-radius: 3px 0 0 3px !important;
     text-align: right;
     color: #AAA;
-    font-size: .92857em;
+    font-size: 0.79577em;
 }
 
 h5.codefile {
     background: #eee;
     padding: 4px 8px;
-    line-height:1;
+    line-height:2;
     font-weight: normal;
     color: #777;
     font-size: 15px;
@@ -365,7 +430,7 @@ header {
     border: none;
     padding: 0;
 }
-.post-content p code, .comment-content p code {
+.post-content p code, .comment-content p code, .post-content li code, .comment-content li code{
     display:inline;
     margin:0 5px;
     padding:3px 5px;
@@ -661,7 +726,7 @@ img.alignright {
     font-style: normal;
 }
 .title404 p{
-    font-family:"DejaVu Sans", Tahoma, "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    font-family:"DejaVu Sans", Tahoma, "TIBch", "Classic Grotesque W01", "Helvetica Neue", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
     font-size: 30px;
     line-height: 40px;
     margin: 0.5em 0.6em;
@@ -720,6 +785,7 @@ img.alignright {
     background-color: #01b8b5;
     color: #fff;
     line-height:1;
+    border-top-right-radius: 2px;
 }
 
 .language-text:before{
@@ -730,6 +796,9 @@ img.alignright {
 }
 .language-qt:before{
     content:"QT";
+}
+.language-qt4:before{
+    content:"QT4";
 }
 .language-bash:before{
     content:"BASH";
@@ -756,8 +825,98 @@ img.alignright {
     content:"Javascript";
 }
 
+[id^="diag-"] ,[id*="diag-"]{
+}
 
- @media print, screen and (max-width:1290px) {
+li.hascheck {
+    list-style: none;
+}
+/** print **/
+.booktitle {
+    display: none;
+}
+
+@media print { 
+    @page {
+        margin: 1.5cm 1.2cm !important;
+    }
+    h1 {
+        border: none !important;
+        text-align: center;
+    }
+    h3 {
+        border: none !important;
+    }
+    .post {
+        padding:0 !important;
+        margin: 0 !important;
+    }
+    .booktitle {
+        text-align: center;
+        display: block !important;
+        page-break-after: always !important;
+        height: 25cm;
+    }
+    .booktitle h1{
+        padding-top: 10cm !important;
+        margin: 0cm 5cm 5cm 5cm !important;
+        font-size: 35pt;
+    }
+    h2, h3, h5.codefile { page-break-after: avoid; }
+    .breakpage {
+        page-break-before: always;
+    }
+    pre, h5.codefile {
+        box-decoration-break: clone;
+        -moz-background-inline-policy: bounding-box;
+        -webkit-box-decoration-break: clone;
+    }
+    h2 {
+        padding-top: 20px;
+    }
+    .post
+    {
+        border: none;
+        border-radius: 0;
+    }
+    .post-meta {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    #comments {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #secondary {
+        display: none;
+    }
+    .pre-numbering{
+        display: none;
+    }
+    .has-numbering
+    {
+        margin: 0 !important;
+    }
+    #main {
+        width:100%;
+        margin:0 !important;
+        padding:0 !important;
+        display:inline-block !important;
+    }
+    .container, .post-content{
+        padding: 0 !important;
+    }
+    .res-cons {
+        width:auto;
+        margin-right:0;
+    }
+}
+
+@media print, screen and (max-width:1290px) {
     .container {
         width:auto;
     }
@@ -875,6 +1034,13 @@ img.alignright {
     #nav-menu span {
         margin:0 3px 0 4px;
         height:27px;
+    }
+    .pre-numbering{
+        display: none;
+    }
+    .has-numbering
+    {
+        margin: 0;
     }
 }
 @media print, screen and (max-width:500px) {

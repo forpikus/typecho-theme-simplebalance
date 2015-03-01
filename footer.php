@@ -9,14 +9,33 @@
 </footer>
 <?php $this->footer(); ?>
 <script>
-	hljs.initHighlightingOnLoad();
     var _t_editor = new Behave({
         textarea: document.getElementById('commenttext')
     });
     $(function(){
+        var diag = 0;
         $('pre code').each(function(){
             var lines = $(this).text().split('\n').length;
             var $numbering = $('<ul/>').addClass('pre-numbering');
+            if ($(this).hasClass('language-flow'))
+            {
+                var $diag = $('<div id="diag-'+diag+'" style="text-align: center;"/>');
+                $(this).parent().before($diag);
+                flowchart.parse($(this).text()).drawSVG('diag-'+diag);
+                diag++;
+                $(this).parent().remove();
+                return;
+            }
+            if ($(this).hasClass('language-sequence'))
+            {
+                var $diag = $('<div id="diag-'+diag+'" style="text-align: center;"/>');
+                $(this).parent().before($diag);
+                $diag.text($(this).text());
+                $diag.sequenceDiagram({theme: 'simple'});
+                diag++;
+                $(this).parent().remove();
+                return;
+            }
             $(this)
                 .addClass('has-numbering')
                 .parent()
@@ -25,7 +44,20 @@
                 $numbering.append($('<li/>').text(i));
             }
         });
+        $('ul li').each(function(){
+            if ($(this).text().indexOf('[ ]') == 0)
+            {
+                $(this).addClass('hascheck');
+                $(this).html('<span class="checkf-n"></span>'+$(this).html().substr(3).trim());
+            }
+            else if ($(this).text().indexOf('[x]') == 0)
+            {
+                $(this).addClass('hascheck');
+                $(this).html('<span class="checkf-y"></span>'+$(this).html().substr(3).trim());
+            }
+        });
     });
+    hljs.initHighlightingOnLoad();
 </script>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

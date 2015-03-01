@@ -4,15 +4,16 @@
  * 
  * @package SimpleBalance
  * @author Forpikus Team
- * @version 0.9.4
- * @link http://forpikus.com/blog (original: https://github.com/pickcho/maupassant)
+ * @version 0.9.5
+ * @link https://github.com/forpikus/typecho-theme-simplebalance
  */
+ $this->need('base.php');
  $this->need('header.php');
  ?>
 <div class="col-8" id="main">
 	<div class="res-cons">
 		<?php while($this->next()): ?>
-			<?php if (isset($this->fields->private) && !$this->user->pass("administrator",true)) continue; ?>
+			<?php if (isset($this->fields->private) && !_simpblc::isuacl($this->user, $this->fields->private)) continue; ?>
 			<article class="post">
 				<div class="post-meta">
 					<?php $this->date('F j, Y'); ?>&nbsp;&lt;<?php $this->category();?>&gt;

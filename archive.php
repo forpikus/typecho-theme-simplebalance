@@ -1,4 +1,16 @@
-<?php $this->need('header.php'); ?>
+<?php
+/**
+ * Simple Balance Theme based on Maupassant (cho)
+ * 
+ * @package SimpleBalance
+ * @author Forpikus Team
+ * @version 0.9.5
+ * @link https://github.com/forpikus/typecho-theme-simplebalance
+ */
+
+$this->need('base.php');
+$this->need('header.php');
+?>
 <div class="col-8" id="main">
     <div class="res-cons">
         <h3 class="archive-title"><?php $this->archiveTitle(array(
@@ -10,7 +22,7 @@
         </h3>
         <?php if ($this->have()): ?>
         <?php while($this->next()): ?>
-        <?php if (isset($this->fields->private) && !$this->user->pass("administrator",true)) continue;?>
+        <?php if (isset($this->fields->private) && !_simpblc::isuacl($this->user, $this->fields->private)) continue;?>
             <article class="post">
             <div class="post-meta">
                 <?php $this->date('F j, Y'); ?><?php if(!$this->is('category')):?>&nbsp;&lt;<?php $this->category();?>&gt;<?php endif;?>

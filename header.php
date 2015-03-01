@@ -3,7 +3,6 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="<?php $this->options->charset(); ?>" />
     <meta name="viewport" content="width=device-width,user-scalable=no">
@@ -16,15 +15,18 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="<?php $this->options->themeUrl('javascript/html5shiv.js'); ?>"></script>
     <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="stylesheet" href="<?php $this->options->adminUrl('css/normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/highlight.js/8.4/styles/dark.min.css">-->
     <link rel="stylesheet" href="//cdnjs.net/ajax/libs/??highlight.js/8.4/styles/xcode.min.css">
-    <script src="http://cdnjs.net/ajax/libs/??jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
+    <script src="//cdnjs.net/ajax/libs/??jquery/1.8.3/jquery.min.js,highlight.js/8.4/highlight.min.js"></script>
     <script src="<?php $this->options->themeUrl('javascript/qt.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('javascript/text.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('javascript/behave.min.js'); ?>"></script>
+    <script type="text/javascript" src="//cdnjs.net/ajax/libs/??underscore.js/1.8.2/underscore-min.js,raphael/2.1.2/raphael-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.net/ajax/libs/js-sequence-diagrams/1.0.4/sequence-diagram-min.js"></script>
+    <script type="text/javascript" src="<?php $this->options->themeUrl('javascript/flowchart-1.4.0.min.js'); ?>"></script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <?php $this->header("generator=&template=&"); ?>
 </head>
 <body>
