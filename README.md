@@ -13,9 +13,9 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
 - ```new, 0.9.5``` 增加了打印支持，使打印出的Markdown更易于阅读
 - ```new, 0.9.5``` 增加了GFM样式的Task List支持，用法同GFM
 - ```new, 0.9.5``` 已支持LaTeX，Usage：`$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$`
-- ```new, 0.9.5``` 已支持流程图[flowchat][]
+- ```new, 0.9.5``` 已支持流程图[flowchat][]<br/>
   Usage：
-  ````
+  <pre><code>
      ```flowchat  
      st=>start: Start
      e=>end
@@ -26,17 +26,17 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
      cond(yes)->e
      cond(no)->op
      ```
-  ````
-- ```new, 0.9.5``` 已支持时序图[sequence][]
+  </code></pre>
+- ```new, 0.9.5``` 已支持时序图[sequence][]<br/>
   Usage：
-  ````
+  <pre><code>
      ```sequence  
      Andrew->China: Says Hello
      Note right of China: China thinks\nabout it
      China-->Andrew: How are you?
      Andrew->>China: I am good thanks!
      ```
-  ````
+  </code></pre>
 - ```new, 0.9.5``` 可定制的文章权限控制，在发布的文章后新建一个名为```private```的自定义字段，便可阻止指定等级以下的用户浏览该文章，字段值为[用户等级][useracl]，留空默认为4(vistor)即只有注册用户可以访问
 - ```0.9.4``` 代码部分可以通过```##### main.h {.codefile}```来在代码区域前显示一个文件名
 - ```0.9.4``` 自动的响应式类别导航栏
@@ -52,12 +52,12 @@ SimpleBalance名字来自Forpikus Team的Blog -- ```Discover a balance point```�
     - 修改了部分不适当的css样式
 
 ## Todo
-- [ ]\#3: 为Sidebar和NavBar中的分类做可配置调整
-- [ ]\#4: 为评论提供更好的体验
-- [ ]\#5: 提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
-- [ ]\#6: 提供一个To Top的跟随按钮
-- [x]\#2: 修改```private```字段的权限从固定的```administrator```变更为可调整
-- [x]\#1: 为主题添加一个Demo ScreenShot
+- [ ] \#3: 为Sidebar和NavBar中的分类做可配置调整
+- [ ] \#4: 为评论提供更好的体验
+- [ ] \#5: 提供多语言支持（注：Typecho目前部分代码仍然只支持中文，比如日期归档）
+- [ ] \#6: 提供一个To Top的跟随按钮
+- [x] \#2: 修改```private```字段的权限从固定的```administrator```变更为可调整
+- [x] \#1: 为主题添加一个Demo ScreenShot
 
 ## History
 - **changelog-0.9.4**
