@@ -142,7 +142,7 @@ mark {
 pre, code {
     
     font-family: "DejaVu Sans Mono", Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
-    font-size: 0.79577em;
+    font-size: 0.92857em;
     line-height: 1.3;
 }
 code {
@@ -177,7 +177,7 @@ code.has-numbering {
     border-radius: 3px 0 0 3px !important;
     text-align: right;
     color: #AAA;
-    font-size: 0.79577em;
+    font-size: 0.92857em;
 }
 
 h5.codefile {
@@ -341,7 +341,7 @@ a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
     background:none;
 }
 .col-8 {
-    width:800px;
+    width:850px;
 }
 .col-12{
     width: 100%;
@@ -353,7 +353,7 @@ a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
 }
 #secondary {
     float:left;
-    width:245px;
+    width:210px;
     border-right:1px solid #ddd;
     padding-right:35px;
     word-wrap:break-word;
